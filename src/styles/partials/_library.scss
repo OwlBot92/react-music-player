@@ -11,9 +11,19 @@
     transform: translateX(-100%);
     transition: all .5s ease;
     opacity: 0;
-    
+
+    h1,h2,h3{
+    color: rgb(54, 54, 54); 
+    }
+
+    h4{
+    font-weight: 600;
+    color: rgb(100, 100, 100);
+    }
+
     h2{
-        text-align: center;
+        text-align: left;
+        padding-left: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
     }
@@ -31,8 +41,15 @@
         margin-right: 1rem;
     }
     &:hover{
-        background: teal;
+        background:rgb(119, 101, 201);
+        h3{
+            color: rgb(212, 212, 212);
+        }
+        h4{
+            color: rgb(255, 255, 255);
+        }
     }
+    transition: all .3s ease;
 }
 
 
@@ -72,7 +89,22 @@
 }
 
 *::-webkit-scrollbar-thumb{
-    background-color: rgba(151, 16, 16, 0.5);
+    background-color: #2a9c93;
     border-radius: 20px;
     border: transparent;
 }
+
+
+
+
+@media screen and (max-width: 768px) {
+    .library{
+        width: 100%;
+    }
+
+    img{
+        width: 40%;
+        margin-right: 1rem;
+    }
+}
+

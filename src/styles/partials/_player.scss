@@ -14,11 +14,15 @@
 
     input{
         width: 100%;
-        padding: 1rem 0rem;
+        -webkit-appearance: none;
+        background-color: transparent;
+        cursor: pointer;
     }
 
     p{
-        padding: 1rem;
+        text-align: center;
+        display: inline-block;
+        width: 65px;
     }
 }
 
@@ -27,9 +31,50 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-
+   
     svg{
         cursor: pointer;
+    }
+}
+
+input[type="range"]:focus{
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+   
+    height: 10px;
+    width: 10px;
+}
+
+
+.track{
+    position: relative;
+    width: 100%;
+    height: 14px;
+    border-radius: 1rem;
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.animate-track{
+    background: linear-gradient(to right,lightgrey, darkgrey);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX();
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .time-control{
+        width: 90%;
+    }
+    .play-control{
+        width: 60%;
     }
 }
